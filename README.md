@@ -10,15 +10,18 @@ SQL, sqlite, SQL postgree, Python 3, SQL Alchemy, DateTime, Numpy, Pandas
 
 ![x](image/image44.png)
 
+![x](image/image45.png)
+
+![x](image/image46.png)
+
+#Query
+
+
 ![x](image/image1.png)
 
 ![x](image/image2.png)
 
 ![x](image/image4.png)
-
-![x](image/image45.png)
-
-![x](image/image46.png)
 
 ![x](image/image5.png)
 
