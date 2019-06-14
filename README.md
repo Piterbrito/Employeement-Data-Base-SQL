@@ -205,6 +205,7 @@ WHERE departments.dept_name = 'Sales';
 ...
 
 ![x](image/image6.png)
+![x](image/image8.png)
 
 
 
@@ -264,6 +265,5 @@ Importing the SQL database into Pandas.
 
 
 
-![x](image/image8.png)
 
 
