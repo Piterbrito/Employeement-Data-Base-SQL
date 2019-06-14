@@ -7,9 +7,9 @@ Conduct a research project on employees of the corporation from the 1980s and 19
 
 Design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, perform the following:
 
-*Data Modeling
-*Data Engineering
-*Data Analysis
+* Data Modeling
+* Data Engineering
+* Data Analysis
 
 
 # Process
@@ -24,8 +24,7 @@ Inspect the CSVs and sketch out an ERD of the tables
 * Use the information to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
 * Import each CSV file into the corresponding SQL table.
 
-...
-
+```
 -- Data Engineering --
 -- Drop Tables if Existing
 DROP TABLE IF EXISTS departments;
@@ -112,7 +111,8 @@ SELECT * FROM employees;
 SELECT * FROM salaries;
 SELECT * FROM titles;
 
-...
+```
+
 
 
 #### Data Analysis
@@ -122,30 +122,38 @@ Once there is a complete database, do the following:
 
 * List the following details of each employee: employee number, last name, first name, gender, and salary.
 
-...
+```
+
 
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.gender, salaries.salary
 FROM employees
 JOIN salaries
 ON employees.emp_no = salaries.emp_no;
 
-...
+```
+
+![x](image/image1.png)
+
 
 
 * List employees who were hired in 1986.
 
-...
+```
+
 
 SELECT first_name, last_name, hire_date 
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1987-01-01';
 
-...
+```
+
+![x](image/image2.png)
 
 
 * List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.
 
-...
+```
+
 
 SELECT departments.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name, dept_manager.from_date, dept_manager.to_date
 FROM departments
@@ -154,11 +162,15 @@ ON departments.dept_no = dept_manager.dept_no
 JOIN employees
 ON dept_manager.emp_no = employees.emp_no;
 
-...
+```
+
+![x](image/image4.png)
+
 
 * List the department of each employee with the following information: employee number, last name, first name, and department name.
  
- ...
+ ```
+
 
 SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
 FROM dept_emp
@@ -172,7 +184,11 @@ FROM employees
 WHERE first_name = 'Hercules'
 AND last_name LIKE 'B%';
 
-...
+```
+
+![x](image/image5.png)
+
+
 
 * List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
@@ -187,6 +203,10 @@ ON dept_emp.dept_no = departments.dept_no
 WHERE departments.dept_name = 'Sales';
 
 ...
+
+![x](image/image6.png)
+
+
 
 List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
@@ -210,6 +230,10 @@ COUNT(last_name) DESC;
 
 ...
 
+![x](image/image7.png)
+
+
+
 
 # Findings
 
@@ -231,20 +255,14 @@ Importing the SQL database into Pandas.
 
 ![x](image/image46.png)
 
-#Query
 
 
-![x](image/image1.png)
 
-![x](image/image2.png)
 
-![x](image/image4.png)
 
-![x](image/image5.png)
 
-![x](image/image6.png)
 
-![x](image/image7.png)
+
 
 ![x](image/image8.png)
 
