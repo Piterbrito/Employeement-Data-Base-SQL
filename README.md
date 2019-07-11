@@ -192,7 +192,7 @@ AND last_name LIKE 'B%';
 
 * List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-...
+```
 
 SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
 FROM dept_emp
@@ -202,7 +202,7 @@ JOIN departments
 ON dept_emp.dept_no = departments.dept_no
 WHERE departments.dept_name = 'Sales';
 
-...
+```
 
 ![x](image/image6.png)
 ![x](image/image8.png)
@@ -211,7 +211,7 @@ WHERE departments.dept_name = 'Sales';
 
 List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
-...
+```
 
 SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
 FROM dept_emp
@@ -229,7 +229,7 @@ GROUP BY last_name
 ORDER BY
 COUNT(last_name) DESC;
 
-...
+```
 
 ![x](image/image7.png)
 
